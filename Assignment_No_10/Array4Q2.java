@@ -15,36 +15,21 @@ class Array4Q2
 		{
 			if (a[i] == a[j])
 			{
-				count++;	
+				a[j] = -1;		
 			}	
 		}
 	}
 	
-	System.out.println(count);
-	int b[] = new int[count];
-	
-	int k =0;
-
+	System.out.print("Duplicate delete array :");
 	for (int i=0;i<a.length;i++)
-	{	
-		
-		for (int j=i+1;j<a.length;j++)
-		{
-			if (a[i] != a[j])
-			{
-				if (k >5)
-				b[k++] = a[j];	
-				break;
-			}
-				
-		}
-	}
-	
-	System.out.println("New Array is :");
-	for (int i=0;i<count;i++)
 	{
-		System.out.print(b[i]+" ");
+		if (a[i] != -1)
+		{
+			System.out.print(a[i]+" ");
+			count++;
+		}	
 	}
-	
+	System.out.println("\nDuplicate delete array length is :"+count);	
+		
 	}
 }
